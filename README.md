@@ -1,40 +1,70 @@
-Art Vista🎨 - Virtual Art Gallery 🌐
+# Getting Started with Create React App
 
-# ArtVista
-Art Vista - A MERN stack Final Year Project, revolutionizing art appreciation. Dive into immersive categories, explore dynamic artist portfolios, and shop oversized wall art. Contact artists, stay informed in the Journal. Bridging art and tech, Art Vista is where innovation meets expression! 🎨✨ #FYP #ArtTech
-About:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Art Vista is an innovative Final Year Project that stands at the intersection of technology and art, offering a sophisticated virtual art gallery experience. Developed using the MERN (MongoDB, Express.js, React, Node.js) stack and incorporating cutting-edge tools and frameworks, Art Vista redefines the way we engage with and appreciate art in the digital age.
+## Available Scripts
 
-Key Features:
+In the project directory, you can run:
 
-Immersive Arts by Category:
-Explore a curated collection of artworks categorized into paintings, fine arts, decorative art, abstract, pop art, and nature. Each category provides an immersive journey into different artistic expressions.
+### `npm start`
 
-Dynamic Artist Portfolios:
-Art Vista goes beyond merely showcasing artworks; it serves as a platform for artists to build digital portfolios. Users can delve into the unique styles and narratives of different artists, fostering a deeper connection between creators and appreciators.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Oversized Wall Art Store:
-Art Vista introduces the largest online store for oversized wall art. Collaborating with contemporary artists, the platform offers high-quality pieces directly contributing to the artists with every purchase. The store is a testament to the fusion of art, commerce, and technology.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Interactive Contact and Journal Sections:
-Facilitate communication through the interactive contact form and stay updated with the latest in the art world through Art Vista's Journal. These features add a dynamic layer to the user experience.
+### `npm test`
 
-Technological Stack:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Frontend: React.js - Leveraging the latest features and components for a seamless and responsive design.
-Backend: MongoDB and Express.js - Ensuring robust data storage and server-side functionality.
-Full Stack: MERN stack architecture for a comprehensive and efficient development cycle.
-Objective:
+### `npm run build`
 
-Art Vista aims to create a bridge between art enthusiasts and artists, fostering a virtual space where creativity thrives. The project explores the potential of technology in enhancing the art experience, emphasizing the symbiotic relationship between art and its audience.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Impact:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-As a Final Year Project, Art Vista represents a culmination of technical skills, creativity, and a forward-thinking approach to digital art presentation. It serves as a testament to the versatility of the MERN stack in developing sophisticated and interactive web applications.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Acknowledgment:
+### `npm run eject`
 
-This project is dedicated to the vibrant community of artists and art lovers, bridging the gap between traditional art appreciation and the limitless possibilities offered by the digital realm.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Explore Art Vista - Where Innovation Meets Artistic Expression!
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

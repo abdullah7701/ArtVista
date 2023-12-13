@@ -1,0 +1,71 @@
+/* ArtVistaProfile.css */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .form-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .btn {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #23272b;
+  }
+  
+  .text-dark {
+    color: #343a40;
+  }
+  
+  .text-dark:hover {
+    text-decoration: underline;
+  }
+  
+  /* Additional styling for profile-specific elements */
+  
+  /* Profile Picture */
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  
+  /* Additional styling for other profile sections */
+  

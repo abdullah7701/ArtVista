@@ -1,34 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/smallLogo.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/smallLogo.ico" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+<meta charset="utf-8" />
+<link rel="icon" href="%PUBLIC_URL%/smallLogo.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#000000" />
+<meta name="description" content="Web site created using create-react-app" />
+<link rel="apple-touch-icon" href="%PUBLIC_URL%/smallLogo.ico" />
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<style>
+  /* Normalizing styles */
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    cursor: none;
+    overflow-x: hidden; 
+    /* background-color: #fff; */
+  }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>ART VISTA |  A Canvas Beyond Walls</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  #cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid transparent;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    box-shadow: 0 0 20px 5px #2696E8, 0 0 50px 10px #2696E8, 0 0 80px 15px #2696E8;
+    transition: width 0.4s, height 0.4s, border-width 0.4s;
+    z-index: 9999; /* Ensure cursor appears on top of other elements */
+  }
+
+  @keyframes jellyMotion {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(0.95);
+    }
+  }
+
+  @keyframes changeColor {
+    0% {
+      background-color: #2696E8;
+      border-color: transparent;
+      box-shadow: 0 0 20px 5px #2696E8, 0 0 50px 10px #2696E8, 0 0 80px 15px #2696E8;
+    }
+    50% {
+      background-color: #FFD700;
+      border-color: transparent;
+      box-shadow: 0 0 20px 5px #FFD700, 0 0 50px 10px #FFD700, 0 0 80px 15px #FFD700;
+    }
+    100% {
+      background-color: #ff6347;
+      border-color: transparent;
+      box-shadow: 0 0 20px 5px #ff6347, 0 0 50px 10px #ff6347, 0 0 80px 15px #ff6347;
+    }
+  }
+</style>
+<title>ART VISTA |  A Canvas Beyond Walls</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<div id="cursor"></div>
+<!-- End of Cursor Animation HTML -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +87,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+    <!-- Cursor Animation JavaScript -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  document.addEventListener('mousemove', (e) => {
+    const cursor = document.getElementById('cursor');
+    const delay = 100; // Adjust the delay time as needed
+    const xOffset = Math.sin((e.clientY + e.clientX) / delay) * 5; // Adjust the amplitude of the motion
+
+    cursor.style.left = e.clientX + xOffset + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  
+</script>
+</body>
 </html>

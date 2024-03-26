@@ -11,7 +11,7 @@ const ProductInfo = ({ productInfo }) => {
       <p className="text-base text-gray-600">{productInfo.des}</p>
       <p className="text-sm">Be the first to leave a review.</p>
       <p className="font-medium text-lg">
-        <span className="font-normal">Colors:</span> {productInfo.color}
+        <span className="font-normal">Art By :</span> {productInfo.color}
       </p>
       <button
         onClick={() =>
@@ -33,7 +33,7 @@ const ProductInfo = ({ productInfo }) => {
       </button>
       <p className="font-normal text-sm">
         <span className="text-base font-medium"> Categories:</span> Spring
-        collectionDiscover artwork by style, mood, genre & tone:
+        collection Discover artwork by style, mood, genre & tone:
       </p>
     </div>
   );

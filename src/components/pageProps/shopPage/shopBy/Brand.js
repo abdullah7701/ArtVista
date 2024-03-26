@@ -7,23 +7,27 @@ const Brand = () => {
   const brands = [
     {
       _id: 9006,
-      title: "Apple",
+      title: "IR Artworks",
     },
     {
       _id: 9007,
-      title: "Ultron",
+      title: "Artur Chen",
     },
     {
       _id: 9008,
-      title: "Unknown",
+      title: "Michiel Folkers",
     },
     {
       _id: 9009,
-      title: "Shoppers Home",
+      title: "Seek One",
     },
     {
       _id: 9010,
-      title: "Hoichoi",
+      title: "BambashkART",
+    },
+    {
+      _id: 9011,
+      title: "UnderDott",
     },
   ];
 
@@ -33,7 +37,7 @@ const Brand = () => {
         onClick={() => setShowBrands(!showBrands)}
         className="cursor-pointer"
       >
-        <NavTitle title="Shop by Brand" icons={true} />
+        <NavTitle title="Art's by Brand" icons={true} />
       </div>
       {showBrands && (
         <motion.div

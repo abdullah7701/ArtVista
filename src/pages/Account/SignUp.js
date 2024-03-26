@@ -63,10 +63,10 @@ const SignUp = () => {
   // ============= Event Handler End here ===============
   // ================= Email Validation start here =============
   const EmailValidation = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
-  };
+  // Regular expression for a valid email address
+  const emailRegex = /^[^\d\s][^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
   // ================= Email Validation End here ===============
 
   const handleSignUp = async (e) => {
@@ -158,11 +158,11 @@ const SignUp = () => {
           setCountry("");
           setZip("");
         } catch (error) {
-          // Handle errors
-          console.error('Error creating account:', error.response ? error.response.data : error.message);
-        }
-      }
+      // Handle errors
+      console.error('Error creating account:', error.response ? error.response.data : error.message);
     }
+  }
+};
   };  
   return (
     <div className="w-full h-screen flex items-center justify-start">
@@ -446,3 +446,13 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+
+
+
+
+
+
+
+

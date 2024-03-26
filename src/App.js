@@ -1,3 +1,4 @@
+import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,7 +23,9 @@ import Journal from "./pages/Journal/Journal";
 import Offer from "./pages/Offer/Offer";
 import Payment from "./pages/payment/Payment";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-// import Shop from "./pages/Shop/Shop";
+import Shop from "./pages/Shop/Shop";
+import Events from "./pages/Events/Events";  
+
 
 const Layout = () => {
   return (
@@ -37,27 +40,33 @@ const Layout = () => {
     </div>
   );
 };
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    // <Route>
+      <Route>
       <Route path="/" element={<Layout />}>
         {/* ==================== Header Navlink Start here =================== */}
-        <Route index element={<Home />}></Route>
-        {/* <Route path="/shop" element={<Shop />}></Route> */}
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/journal" element={<Journal />}></Route>
+        <Route index element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/journal" element={<Journal />} />
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/product/:_id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/paymentgateway" element={<Payment />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/events" element={<Events />} /> 
         
-        <Route path="/offer" element={<Offer />}></Route>
-        <Route path="/product/:_id" element={<ProductDetails />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/paymentgateway" element={<Payment />}></Route>
-        <Route path="/Profile" element={<Profile />}></Route> 
-
       </Route>
-      <Route path="/signup" element={<SignUp />}></Route>
-      <Route path="/signin" element={<SignIn />}></Route>
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
+      
     </Route>
+     
+    
+    
   )
 );
 

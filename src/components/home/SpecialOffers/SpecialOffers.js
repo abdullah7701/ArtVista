@@ -16,36 +16,36 @@ const SpecialOffers = () => {
         <Product
           _id="1101"
           img={spfOne}
-          productName="Cap for Boys"
+          productName="Athena's Hidden Eyes"
           price="35.00"
-          color="Blank and White"
+          color="Surreal Art by Underdott "
           badge={true}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des="Blank and White"
         />
         <Product
           _id="1102"
           img={spfTwo}
-          productName="Tea Table"
+          productName="I fall in love"
           price="180.00"
-          color="Gray"
+          color="Wall Art by Artur Chen"
           badge={true}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des="Gray"
         />
         <Product
           _id="1103"
           img={spfThree}
-          productName="Headphones"
+          productName="Skylight"
           price="25.00"
-          color="Mixed"
+          color="Watercolor Wall Art by Shelby Kregel."
           badge={true}
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
         />
         <Product
           _id="1104"
           img={spfFour}
-          productName="Sun glasses"
+          productName="Terracotta"
           price="220.00"
-          color="Black"
+          color="Surreal Illustration by Marco Zagara"
           badge={true}
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
         />

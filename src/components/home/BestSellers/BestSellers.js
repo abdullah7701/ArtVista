@@ -16,38 +16,38 @@ const BestSellers = () => {
         <Product
           _id="1011"
           img={bestSellerOne}
-          productName="Flower Base"
+          productName="Red Box"
           price="35.00"
-          color="Blank and White"
+          color="Vintage Wall Art by Frank Moth."
           badge={true}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des="Red & Black "
         />
         <Product
           _id="1012"
           img={bestSellerTwo}
-          productName="New Backpack"
+          productName="Unique Square Coffee"
           price="180.00"
-          color="Gray"
+          color="Floral Head Wall Art by CapTVArt" 
           badge={false}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des=" Black & White "
         />
         <Product
           _id="1013"
           img={bestSellerThree}
-          productName="Household materials"
+          productName="She Saw The Equator"
           price="25.00"
-          color="Mixed"
+          color="Vintage Art by Frank Moth"
           badge={true}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des="Mixed "
         />
         <Product
           _id="1014"
           img={bestSellerFour}
-          productName="Travel Bag"
+          productName="It Was All A Dream"
           price="220.00"
-          color="Black"
+          color="Surreal Illustration by IR Artwork"
           badge={false}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+          des="Abstract"
         />
       </div>
     </div>

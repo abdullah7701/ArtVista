@@ -122,7 +122,7 @@ const Footer = () => {
           <FooterListTitle title="Subscribe to our newsletter." />
           <div className="w-full">
             <p className="text-center mb-4">
-            Be the first to know about special deals & promotions
+            Be the first to know about special deals & Upcoming Events notifications
             </p>
             {subscription ? (
               <motion.p

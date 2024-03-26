@@ -21,19 +21,19 @@ const SignIn = () => {
     setErrPassword("");
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-
+  
     if (!email) {
       setErrEmail("Enter your email");
       return;
     }
-
+  
     if (!password) {
       setErrPassword("Create a password");
       return;
     }
-
+  
     if (!isChecked) {
       // Handle the case where the checkbox is not checked
       return;
@@ -43,6 +43,28 @@ const SignIn = () => {
     setSuccessMsg(
       `Hello dear, Thank you for your attempt. We are processing to validate your access. Till then stay connected and additional assistance will be sent to you by your mail at ${email}`
     );
+
+    try {
+      const response = await fetch('http://localhost:4000/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+    
+      const data = await response.json();
+    
+      console.log('Response from server:', data);
+    
+      if (response.ok) {
+        setSuccessMsg(data.message);
+      } else {
+        console.error('Server error:', data.message);
+      }
+    } catch (error) {
+      console.error('Error during sign-in:', error);
+    }
 
     setEmail("");
     setPassword("");
@@ -193,12 +215,12 @@ const SignIn = () => {
               >
                 I am not a robot
               </label>
-              {/* Visual indicator for the checkbox */}
+               
               {isChecked && (
                 <BsCheckCircleFill className="text-green-500" />
               )}
             </div>
-            {/* Tooltip for the "I am not a robot" checkbox */}
+            
             {!isChecked && (
               <div className="relative inline-block">
                 <div className="bg-gray-700 text-white rounded-md p-2 text-sm absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-300">

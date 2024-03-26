@@ -1,39 +1,14 @@
-// // Profile.js
-// import React from "react";
-
-// const Profile = () => {
-//   return (
-//     <div className="w-full h-screen flex items-center justify-center">
-//       <div className="max-w-[600px] px-6 py-8 bg-white shadow-md rounded-md">
-//         <h2 className="text-2xl font-semibold mb-4">User Profile</h2>
-//         {/* Add your profile content here */}
-//         <div className="mb-4">
-//           <label className="block text-gray-600 text-sm font-medium">
-//             Username
-//           </label>
-//           <p className="text-gray-800">JohnDoe123</p>
-//         </div>
-//         <div className="mb-4">
-//           <label className="block text-gray-600 text-sm font-medium">
-//             Email
-//           </label>
-//           <p className="text-gray-800">john.doe@example.com</p>
-//         </div>
-//         {/* Add more profile information as needed */}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Profile;
 import React, { useState } from "react";
+
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
 import "./ProfilePage.css";
+
 
 const ArtVistaProfile = () => {
   const [profilePicture, setProfilePicture] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
   const [socialLinks, setSocialLinks] = useState("");
   const [linkedInProfile, setLinkedInProfile] = useState("");
   const [about, setAbout] = useState("");
@@ -54,6 +29,10 @@ const ArtVistaProfile = () => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+  };
+
+  const handleAgeChange = (e) => {
+    setAge(e.target.value);
   };
 
   const handleSocialLinksChange = (e) => {
@@ -82,10 +61,11 @@ const ArtVistaProfile = () => {
     // Add your form validation logic here
 
     // Example validation: Check if name is not empty
-    if (!name.trim()) {
+    if (!name.trim().length) {
       setErrors((prevErrors) => ({ ...prevErrors, name: "Enter your Name" }));
       return;
     }
+    
 
     // Add the logic to handle form submission
     // ...
@@ -94,35 +74,33 @@ const ArtVistaProfile = () => {
   };
 
   return (
-    <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Art Vista Profile" />
-      <form className="pb-20" onSubmit={handleSubmit}>
-        <h1 className="font-titleFont font-semibold text-3xl">
-          Art Vista Profile
-        </h1>
-        <div className="w-[500px] h-auto py-6 flex flex-col gap-6">
-          {/* Profile Picture */}
-          <div>
-            <label className="text-base font-titleFont font-semibold px-2">
-              Profile Picture
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleProfilePictureChange}
-            />
-            {profilePicture && (
-              <img
-                src={URL.createObjectURL(profilePicture)}
-                alt="Profile"
-                className="rounded-full mt-2"
-                style={{ width: "100px", height: "100px" }}
+    <div className="max-w-container mx-auto px-4 flex">
+      <div>
+        <Breadcrumbs title="Art Vista Profile" />
+        <form className="profile-form" onSubmit={handleSubmit}>
+          {/* Left-side section for personal information */}
+          <div className="personal-info">
+            <h1 className="font-titleFont font-semibold text-3xl mb-6">
+              Art Vista Profile
+            </h1>
+            {/* <div className="input-group">
+              <label className="form-label">Name</label>
+              <input
+                onChange={handleNameChange}
+                value={name}
+                className="form-control"
+                type="text"
+                placeholder="Enter your name here"
               />
-            )}
-          </div>
-
-          {/* Personal Information Section */}
-          <div>
+              {errors.name && (
+                <p className="text-red-500 text-sm font-titleFont font-semibold mt-1">
+                  <span className="text-sm italic font-bold">!</span>
+                  {errors.name}
+                </p>
+              )}
+            </div> */}
+            {/* Personal Information Section */}
+          <div  className="input-group">
             <label className="text-base font-titleFont font-semibold px-2">
               Name
             </label>
@@ -140,7 +118,7 @@ const ArtVistaProfile = () => {
               </p>
             )}
           </div>
-          <div>
+          <div className="input-group">
             <label className="text-base font-titleFont font-semibold px-2">
               Email
             </label>
@@ -153,9 +131,21 @@ const ArtVistaProfile = () => {
             />
             {/* Add similar form components for social links and LinkedIn profile */}
           </div>
-
+          {/* Age Section */}
+          <div className="input-group">
+            <label className="text-base font-titleFont font-semibold px-2">
+              Age
+            </label>
+            <input
+              type="number"
+              onChange={handleAgeChange}
+              value={age}
+              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
+              placeholder="Enter your age"
+            />
+          </div>
           {/* About Section */}
-          <div>
+          <div className="input-group">
             <label className="text-base font-titleFont font-semibold px-2">
               About
             </label>
@@ -170,7 +160,7 @@ const ArtVistaProfile = () => {
           </div>
 
           {/* Location Section */}
-          <div>
+          <div className="input-group">
             <label className="text-base font-titleFont font-semibold px-2">
               Location
             </label>
@@ -183,36 +173,60 @@ const ArtVistaProfile = () => {
             />
             {/* You can add icons for different locations here */}
           </div>
-
-          {/* Recent Arts Section */}
-          <div>
-            <label className="text-base font-titleFont font-semibold px-2">
-              Recent Arts
+          </div>
+  
+          <div className="profile-media">
+          {/* Profile Picture Container */}
+          <div className="profile-picture-container">
+            <label className="form-label" htmlFor="profile-upload">
+              Profile Picture
             </label>
             <input
               type="file"
               accept="image/*"
+              id="profile-upload"
+              onChange={handleProfilePictureChange}
+              className="file-input"
+            />
+            <div className="profile-picture" id="preview">
+              {profilePicture && (
+                <img
+                  src={URL.createObjectURL(profilePicture)}
+                  alt="Profile"
+                  className="profile-picture-img"
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Recent Arts Section */}
+          <div className="recent-arts-container">
+            <label className="form-label">Recent Arts</label>
+            <input
+              type="file"
+              accept="image/*"
               onChange={handleRecentArtsChange}
+              className="file-input"
             />
             {recentArts.map((art, index) => (
               <img
                 key={index}
                 src={URL.createObjectURL(art)}
                 alt={`Art ${index + 1}`}
-                className="rounded-full mt-2"
-                style={{ width: "100px", height: "100px" }}
+                className="recent-art"
               />
             ))}
           </div>
-
+        </div>  
+          {/* Save Button */}
           <button
             type="submit"
-            className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200"
+            className="btn bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold mt-8 hover:bg-black hover:text-white duration-200"
           >
             Save Profile
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };

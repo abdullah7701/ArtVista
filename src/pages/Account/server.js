@@ -6,7 +6,7 @@ const cors = require('cors'); // Add cors middleware
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Connect to MongoDB (replace <password> with your actual password)
+
 mongoose.connect('mongodb+srv://abdullahkha7701:topfloor@cluster0.1lyynr7.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,

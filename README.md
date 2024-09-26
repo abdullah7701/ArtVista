@@ -37,3 +37,23 @@ Acknowledgment:
 This project is dedicated to the vibrant community of artists and art lovers, bridging the gap between traditional art appreciation and the limitless possibilities offered by the digital realm.
 
 Explore Art Vista - Where Innovation Meets Artistic Expression! 🚀✨ #FYP #ArtTech
+
+Web View Direct DM abdullahkha7701@gmail.com
+
+![port 1](https://github.com/user-attachments/assets/ce40cf57-6991-427b-ba17-03411cfc9e24)
+
+![port 2](https://github.com/user-attachments/assets/fd8ffb23-d1da-4797-a7cd-54cf7d9d3914)
+
+![port 3](https://github.com/user-attachments/assets/6217b5d8-66c4-4b81-8ec8-e3aac950eb75)
+
+![port 4](https://github.com/user-attachments/assets/71cb3c8b-ebfd-4ec3-b33e-64c40a39d445)
+
+![port 5](https://github.com/user-attachments/assets/3490408c-a4b5-4419-af88-6c10ab02d41a)
+
+![port 6](https://github.com/user-attachments/assets/6d561d88-d27c-40c4-9126-2392306ed154)
+
+![port 7](https://github.com/user-attachments/assets/856fdfa2-d672-4195-92ae-1af2c08300ed)
+
+![port 8](https://github.com/user-attachments/assets/2f842a89-61a9-4923-923c-d68a5f5606a8)
+
+![port 9](https://github.com/user-attachments/assets/c04635a6-aa4c-4167-840c-b811757b95a0)
